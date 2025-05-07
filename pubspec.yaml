@@ -1,0 +1,17 @@
+name: notificacoes_app
+description: App simples para ativar notificações no iOS
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^2.25.4
+  firebase_messaging: ^14.7.4
+
+flutter:
+  uses-material-design: true
