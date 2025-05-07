@@ -1,0 +1,31 @@
+workflows:
+  ios-testflight:
+    name: Build iOS and publish to TestFlight
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      vars:
+        BUNDLE_ID: "com.seunome.notificacoesapp"  # Altere isso para seu ID real
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: "main"
+          include: true
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+      - name: Build iOS release
+        script: |
+          flutter build ipa --release
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      app_store_connect:
+        apple_id: "SEU_EMAIL_APPLE@icloud.com"
+        app_specific_password: Encrypted(APP_SPECIFIC_PASSWORD)
+        bundle_id: "com.seunome.notificacoesapp"
+        submit_to_testflight: true
