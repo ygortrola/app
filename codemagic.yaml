@@ -6,10 +6,10 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
+      groups:
+        - apple-credentials
       vars:
         BUNDLE_ID: "com.ygor.notificacoesapp"
-      groups:
-        - apple-credentials 
     triggering:
       events:
         - push
