@@ -7,7 +7,9 @@ workflows:
       xcode: latest
       cocoapods: default
       vars:
-        BUNDLE_ID: "com.seunome.notificacoesapp"  # Altere isso para seu ID real
+        BUNDLE_ID: "com.ygor.notificacoesapp"
+      groups:
+        - apple-credentials
     triggering:
       events:
         - push
@@ -27,5 +29,5 @@ workflows:
       app_store_connect:
         apple_id: "ygor1158@hotmail.com"
         app_specific_password: Encrypted(APP_SPECIFIC_PASSWORD)
-        bundle_id: "com.seunome.notificacoesapp"
+        bundle_id: "com.ygor.notificacoesapp"
         submit_to_testflight: true
