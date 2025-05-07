@@ -29,5 +29,6 @@ workflows:
       app_store_connect:
         apple_id: "ygor1158@hotmail.com"
         app_specific_password: Encrypted(APP_SPECIFIC_PASSWORD)
+        team_id: "48774VJ75X"
         bundle_id: "com.ygor.notificacoesapp"
         submit_to_testflight: true
