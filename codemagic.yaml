@@ -9,7 +9,7 @@ workflows:
       vars:
         BUNDLE_ID: "com.ygor.notificacoesapp"
       groups:
-        - apple-credentials
+        - apple-credentials 
     triggering:
       events:
         - push
